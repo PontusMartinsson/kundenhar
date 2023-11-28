@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Lexend Light';
+    src: url(../misc/Lexend-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Lexend Medium';
+    src: url(../misc/Lexend-Medium.ttf);
+}
+
+nav {
+    grid-area: nav;
+
+    height: 5rem;
+    background-color: #e74c3c;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/header_background.png);
+    background-size: cover;
+    height: 40rem;
+
+    color: white;
+    font-family: Lexend Medium;
+    font-size: 5rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#wrapper_index {
+    grid-template-areas: 
+    'nav'
+    'header'
+    'footer';
+}
