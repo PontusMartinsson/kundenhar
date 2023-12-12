@@ -10,20 +10,23 @@
 
 body {
     margin: 0;
-    background-color: gray;
+    font-family: Lexend Medium;
+}
+
+p {
+    font-family: Lexend Light;
 }
 
 a {
-    color: white;
+    color: #f55140;
     text-decoration: none;
 }
 
 nav {
     grid-area: nav;
 
-    background-color: #e74c3c;
+    background-color: #ffffff;
     font-size: 1.3rem;
-    font-family: Lexend Medium;
 
     display: flex;
     flex-direction: row;
@@ -37,10 +40,10 @@ div.nav_item {
     border-radius: 1rem;
 }
 div.nav_item:hover {
-    background-color: #f55140;
+    background-color: #f8f8f8;
 }
 
-h2, div.nav_item {
+div.nav_item > h2 {
     padding: 5px 10px 5px 10px;
     margin: 0;
 }
@@ -54,32 +57,60 @@ header {
     background-image: url(../img/header_background.png);
     background-size: cover;
 
-    color: white;
-    font-family: Lexend Medium;
+    color: #ffffff;
     font-size: 5rem;
-}
-
-footer {
-    grid-area: footer;
-
-    background-color: #181a1b;
 }
 
 main {
     grid-area: main;
-
-    background-color: #e74c3c;
+    
+    background-color: #ffffff;
 }
 #wrapper_index {
     height: 300vh;
-
+    
     display: grid;
     grid-template-areas: 
     'nav'
     'header'
     'main'
     'footer';
-
+    
     grid-template-columns: auto;
     grid-template-rows: 3% 20% 65% 12%;
 }
+
+footer {
+    grid-area: footer;
+
+    display: flex;
+    background-color: #F55140;
+    color: #000000;
+}
+
+footer > div {
+    padding: 2rem;
+}
+
+#om_oss {
+    width: 30%;
+
+}
+
+#kundservice {
+    width: 30%;
+
+}
+
+#kontakt {
+    width: 40%;
+    
+}
+
+footer > div > h3 {
+    width: fit-content;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #000000;
+}
+
+/* f8f8f8 */
