@@ -13,12 +13,25 @@ body {
     font-family: Lexend Medium;
 }
 
+h1 {
+    font-size: 16em;
+}
+
 p {
     font-family: Lexend Light;
-    font-size: large;
-    line-height: 25px;
+    font-size: 1.4em;
+    line-height: 30px;
     word-spacing: 3px;
     color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 #wrapper_index {
@@ -39,7 +52,7 @@ nav {
     grid-area: nav;
     
     background-color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 3em;
     
     display: flex;
     flex-direction: row;
@@ -48,7 +61,11 @@ nav {
 }
 
 #logga {
-    height: calc(100% - 20px);
+    height: 90%;
+}
+
+#logga img {
+    height: 100%;
 }
 
 nav > a {
@@ -59,10 +76,10 @@ nav > a {
 div.nav_item {
     height: fit-content;
     width: fit-content;
-    border-radius: 1rem;
+    border-radius: 15px;
 }
 div.nav_item:hover {
-    background-color: #ebebeb;
+    background-color: #f2f2f2;
 }
 
 div.nav_item > h2 {
@@ -80,7 +97,6 @@ header {
     background-size: cover;
 
     color: #ffffff;
-    font-size: 5rem;
 }
 
 main {
@@ -93,33 +109,31 @@ footer {
     grid-area: footer;
 
     display: flex;
+    justify-content: space-between;
     background-color: #F55140;
-
-    /* color: #000000; */
 }
 
 footer > div {
     padding: 2rem;
-}
-
-#om_oss {
     width: 30%;
-
 }
 
-#kundservice {
-    width: 30%;
-
-}
-
-#kontakt {
-    width: 40%;
-    
-}
-
-footer > div > h3 {
+footer h3 {
     width: fit-content;
     padding-bottom: 1px;
     border-bottom: 2px solid #000000;
     color: #000000;
+}
+
+#social_media {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 0;
+}
+
+.social_icon {
+    width: 100px;
+    height: 100px;
 }
