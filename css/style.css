@@ -14,14 +14,22 @@ body {
 }
 
 h1 {
-    font-size: 16em;
+    font-size: 10vw;
+}
+
+h4 {
+    font-size: 1.3vw;
+    width: fit-content;
+    padding-bottom: 0.1vw;
+    margin: 1vw 0 1vw 0;
+    border-bottom: 0.2vw solid #000000;
+    color: #000000;
 }
 
 p {
     font-family: Lexend Light;
-    font-size: 1.4em;
-    line-height: 30px;
-    word-spacing: 3px;
+    font-size: 1vw;
+    line-height: 1.3vw;
     color: #000000;
 }
 
@@ -53,7 +61,7 @@ nav {
     grid-area: nav;
     
     background-color: #ffffff;
-    font-size: 3em;
+    font-size: 1.5vw;
     
     display: flex;
     flex-direction: row;
@@ -77,14 +85,14 @@ nav > a {
 div.nav_item {
     height: fit-content;
     width: fit-content;
-    border-radius: 15px;
+    border-radius: 1vw;
 }
 div.nav_item:hover {
     background-color: #f2f2f2;
 }
 
 div.nav_item > h2 {
-    padding: 10px 20px 10px 20px;
+    padding: 0.3vw 0.8vw 0.4vw 0.8vw;
     margin: 0;
 }
 /*#endregion*/
@@ -97,6 +105,7 @@ header {
 
     background-image: url(../img/header_background.png);
     background-size: cover;
+    background-position: center;
 
     color: #ffffff;
 }
@@ -105,13 +114,14 @@ main {
     grid-area: main;
     
     background-color: #ffffff;
+    
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 /*#region main index*/
+
 #index {
-    padding-left: 20%;
-    padding-right: 20%;
-    
     display: flex;
 }
 
@@ -134,27 +144,21 @@ footer {
 }
 
 footer > div {
-    padding: 2rem;
+    padding: 1.5vw 2vw 0 2vw;
     width: 30%;
-}
-
-footer h3 {
-    width: fit-content;
-    padding-bottom: 1px;
-    border-bottom: 2px solid #000000;
-    color: #000000;
 }
 
 #social_media {
     display: flex;
     flex-flow: row wrap;
-    gap: 30px;
+    gap: 2vw;
     width: 100%;
     margin: 0;
 }
 
 .social_icon {
-    width: 100px;
-    height: 100px;
+    width: 4vw;
+    height: 4vw;
+    margin-top: 1vw;
 }
 /*#endregion*/
