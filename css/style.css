@@ -29,13 +29,14 @@ h4 {
 p {
     font-family: Lexend Light;
     font-size: 1vw;
-    line-height: 1.3vw;
+    line-height: 3vh;
     color: #000000;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 2vh;
 }
 
 .underline {
@@ -43,7 +44,7 @@ ul {
 }
 
 #wrapper_index {
-    height: 300vh;
+    height: fit-content;
     
     display: grid;
     grid-template-areas: 
@@ -53,7 +54,7 @@ ul {
     'footer';
     
     grid-template-columns: auto;
-    grid-template-rows: 3% 25% 60% 12%;
+    grid-template-rows: 9vh 75vh min-content 36vh;
 }
 
 /*#region nav*/
@@ -114,24 +115,64 @@ main {
     grid-area: main;
     
     background-color: #ffffff;
-    
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 /*#region main index*/
 
 #index {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    'rubrik rubrik'
+    'text text'
+    'box1 box2';
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content min-content min-content;
+
+    padding: 0 10% 0 10%;
 }
 
-.index_card_layout {
-
+#index > * {
+    height: fit-content;
+    width: fit-content;
 }
 
-#index h2 {
+#index > h2 {
+    grid-area: rubrik;
+
+    font-size: 1.8vw;
     
+    margin-top: 24vh;
+    padding-bottom: 0.1vh;
+    border-bottom: 0.4vh solid #000000;
+    justify-self: center;
 }
+
+#index > p {
+    grid-area: text;
+    margin: 0;
+    justify-self: center;
+}
+
+#index > a {
+    width: 96%;
+    margin: 24vh 2vw 24vh 2vw;
+}
+
+.index_main_boxes {
+    height: 90vh;
+
+    background-color: #f2f2f2;
+    border-radius: 1vw;
+}
+
+#box_workout {
+    grid-area: box1;
+}
+#box_health {
+    grid-area: box2;
+}
+
 /*#endregion*/
 
 /*#region footer*/
@@ -151,14 +192,14 @@ footer > div {
 #social_media {
     display: flex;
     flex-flow: row wrap;
-    gap: 2vw;
+    /* gap: 2vw; */
     width: 100%;
     margin: 0;
 }
 
 .social_icon {
-    width: 4vw;
-    height: 4vw;
-    margin-top: 1vw;
+    width: 8vh;
+    height: 8vh;
+    margin: 1vh 0.8vw 1vh 0.8vw;
 }
 /*#endregion*/
