@@ -8,6 +8,11 @@
     src: url(../misc/Lexend-Medium.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: Lexend Medium;
@@ -17,18 +22,8 @@ h1 {
     font-size: 10vw;
 }
 
-h3 {
-    font-size: 2vw;
-    margin: 0;
-    text-align: center;
-}
-
 h4 {
-    font-size: 1.3vw;
     width: fit-content;
-    padding-bottom: 0.1vw;
-    margin: 1vw 0 1vw 0;
-    border-bottom: 0.2vw solid #000000;
     color: #000000;
 }
 
@@ -42,12 +37,19 @@ p {
 a {
     text-decoration: none;
     color: #000000;
+
+    display: inline-block;
+    width: fit-content;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin-top: 2vh;
+}
+
+li {
+    margin: 0 0 1vh 0;
 }
 
 .underline {
@@ -65,7 +67,7 @@ ul {
     'footer';
     
     grid-template-columns: auto;
-    grid-template-rows: 9vh 75vh min-content 36vh;
+    grid-template-rows: 9vh 75vh min-content min-content;
 }
 
 /*#region nav*/
@@ -128,7 +130,6 @@ main {
 }
 
 /*#region main index*/
-
 #index {
     display: grid;
     grid-template-areas: 
@@ -139,7 +140,7 @@ main {
     grid-template-columns: 50% 50%;
     grid-template-rows: min-content min-content min-content;
     
-    padding: 0 10% 0 10%;
+    margin: 0 10% 0 10%;
 }
 
 #box_workout {
@@ -158,10 +159,17 @@ main {
     grid-area: rubrik;
     
     font-size: 1.8vw;
-    
-    margin: 24vh auto 2vh auto;
+    text-align: center;
+
+    width: 100%;
+    margin: 24vh 0 2vh 0;
     padding-bottom: 0.1vh;
-    border-bottom: 0.4vh solid #000000;
+}
+
+#index h3 {
+    font-size: 2vw;
+    margin: 2vh 0 0 0;
+    text-align: center;
 }
 
 #index > p {
@@ -176,7 +184,10 @@ main {
     justify-self: center;
 }
 
-#index > a:hover h3 {
+#index > a:hover div{
+    background-color: #e0e0e0;
+}
+#index > a:hover h3{
     text-decoration: underline;
 }
 
@@ -204,6 +215,73 @@ p.index_box_text {
 
 /*#endregion*/
 
+/*#region main card*/
+#card {
+    display: grid;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card4 card5 card6';
+
+    grid-template-columns: calc(100%/3 - 4vw/3) calc(100%/3 - 4vw/3) calc(100%/3 - 4vw/3);
+    grid-template-rows: min-content min-content;
+
+    margin: 24vh 15% 24vh 15%;
+    gap: 2vw;
+}
+
+#card1 { grid-area: card1; }
+#card2 { grid-area: card2; }
+#card3 { grid-area: card3; }
+#card4 { grid-area: card4; }
+#card5 { grid-area: card5; }
+#card6 { grid-area: card6; }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    /* background-color: #f2f2f2; */
+    background-color: lightgrey;
+    border-radius: 1vw;
+}
+
+.card_rubrik {
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.card_pris {
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: underline;
+
+    margin: 2vh 0 5vh 0;
+}
+
+a.card_knapp {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin: 4vh auto 1vh auto;
+}
+div.card_knapp {
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 3vw;
+    border-radius: 2vw;
+    
+    background-color: #f55140;
+    text-decoration: 0.3vh underline;
+}
+div.card_knapp:hover {
+    background-color: #ff5c4a;
+}
+
+.kop {
+    font-size: 1.5vw;
+}
+/*#endregion*/
+
 /*#region footer*/
 footer {
     grid-area: footer;
@@ -211,6 +289,13 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #F55140;
+}
+
+footer h4 {
+    font-size: 1.3vw;
+    margin: 1vw 0 1vw 0;
+    padding-bottom: 0.1vw;
+    border-bottom: 0.2vw solid #000000;
 }
 
 footer > div {
@@ -229,5 +314,9 @@ footer > div {
     width: 8vh;
     height: 8vh;
     margin: 1vh 0.8vw 1vh 0.8vw;
+}
+
+#tack {
+    margin: 7vh 0 2vh;
 }
 /*#endregion*/
