@@ -15,7 +15,7 @@
 
 body {
     margin: 0;
-    font-family: Lexend Medium;
+    font-family: "Lexend Medium";
 }
 
 h1 {
@@ -28,7 +28,7 @@ h4 {
 }
 
 p {
-    font-family: Lexend Light;
+    font-family: "Lexend Light";
     font-size: 1vw;
     line-height: 3vh;
     color: #000000;
