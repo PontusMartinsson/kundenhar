@@ -42,14 +42,24 @@ a {
     width: fit-content;
 }
 
+li {
+    font-size: 1vw;
+}
+
 ul {
     list-style: none;
     padding: 0;
     margin-top: 2vh;
 }
+ul > li {
+    margin: 0 0 1vh;
+}
 
-li {
-    margin: 0 0 1vh 0;
+ol {
+    margin-top: 2vh;
+}
+ol > li {
+    margin: 0 0 1vh 1vw;
 }
 
 .underline {
@@ -125,8 +135,6 @@ header {
 
 main {
     grid-area: main;
-    
-    background-color: #ffffff;
 }
 
 /*#region main index*/
@@ -140,7 +148,9 @@ main {
     grid-template-columns: 50% 50%;
     grid-template-rows: min-content min-content min-content;
     
-    margin: 0 10% 0 10%;
+    padding: 0 10% 0 10%;
+    background-image: url(../img/gym_index.jpeg);
+    background-size: cover;
 }
 
 #box_workout {
@@ -174,7 +184,6 @@ main {
 
 #index > p {
     grid-area: text;
-    margin: 0;
     justify-self: center;
 }
 
@@ -185,7 +194,7 @@ main {
 }
 
 #index > a:hover div{
-    background-color: #e0e0e0;
+    background-color: rgba(224, 224, 224, 0.7);
 }
 #index > a:hover h3{
     text-decoration: underline;
@@ -197,7 +206,7 @@ main {
     
     height: fit-content;
     
-    background-color: #f2f2f2;
+    background-color: rgba(242, 242, 242, 0.7);
     border-radius: 1vw;
 }
 
@@ -225,8 +234,11 @@ p.index_box_text {
     grid-template-columns: calc(100%/3 - 4vw/3) calc(100%/3 - 4vw/3) calc(100%/3 - 4vw/3);
     grid-template-rows: min-content min-content;
 
-    margin: 24vh 15% 24vh 15%;
+    padding: 24vh 15% 24vh 15%;
     gap: 2vw;
+
+    background-image: url(../img/gym_card.jpg);
+    background-size: cover;
 }
 
 #card1 { grid-area: card1; }
@@ -240,8 +252,7 @@ p.index_box_text {
     display: flex;
     flex-direction: column;
     padding: 2vw;
-    /* background-color: #f2f2f2; */
-    background-color: lightgrey;
+    background-color: rgba(242, 242, 242, 0.7);
     border-radius: 1vw;
 }
 
@@ -274,7 +285,7 @@ div.card_knapp {
     text-decoration: 0.3vh underline;
 }
 div.card_knapp:hover {
-    background-color: #ff5c4a;
+    background-color: #F26154;
 }
 
 .kop {
@@ -284,9 +295,47 @@ div.card_knapp:hover {
 
 /*#region main recipe*/
 #recipe {
-    background-image: url(../img/mellanmalsbar.jpg);
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    background-image: url(../img/granola_bar.webp);
     background-size: cover;
-    height: 200vh;
+    padding: 10% 20%;
+}
+
+#recipe > * {
+    height: fit-content;
+    width: fit-content;
+}
+
+#recipe > div {
+    height: 20.5vw;
+
+    background-color: rgba(242, 242, 242, 0.7);
+    
+    border-radius: 1vw;
+
+    margin-top: 24vh;
+    padding: 2vw;
+}
+
+#recipe > h2 {
+    font-size: 1.8vw;
+    margin: 0 auto 2vh;
+}
+
+#recipe h3 {
+    font-size: 1.5vw;
+}
+
+#ingredienser {
+    width: 12vw;
+}
+
+#instruktioner {
+    width: 24vw;
 }
 /*#endregion*/
 
